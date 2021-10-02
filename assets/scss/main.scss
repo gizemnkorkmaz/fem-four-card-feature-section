@@ -1,0 +1,120 @@
+$mobile: 1150px;
+$desktop: 1440px;
+//primary colors
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+//neutral colors
+
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+//font-size
+
+$font-size: 15px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  width: 375px;
+  @media (min-width: $mobile) {
+    min-width: $mobile;
+    max-width: $desktop;
+    padding: 0;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  color: $very-dark-blue;
+
+  .header {
+    h1 {
+      text-align: center;
+      span {
+        color: $grayish-blue;
+        font-weight: 400;
+      }
+    }
+    @media (min-width: $mobile) {
+      width: 405px;
+    }
+  }
+  .product-info {
+    text-align: center;
+    p {
+      color: $grayish-blue;
+    }
+    @media (min-width: $mobile) {
+      width: 500px;
+    }
+  }
+  .card-container {
+    padding: 20px;
+    margin: 10px;
+    box-shadow: -1px 3px 18px -11px rgba(66, 63, 66, 0.63);
+    border-radius: 5px;
+    text-align: left;
+    font-size: 13px;
+    img {
+      padding: 10px 10px 10px 200px;
+      @media (min-width: $mobile) {
+        padding: 10px 10px 10px 230px;
+      }
+    }
+    p {
+      color: $grayish-blue;
+    }
+    @media (min-width: $mobile) {
+      width: 350px;
+      margin: 20px;
+    }
+  }
+  .supervisor {
+    border-top: 4px solid $cyan;
+    margin-top: 40px;
+    @media (min-width: $mobile) {
+      position: relative;
+      top: 160px;
+      left: -380px;
+    }
+  }
+  .team {
+    border-top: 4px solid $red;
+    @media (min-width: $mobile) {
+      position: relative;
+      right: 0;
+      bottom: 250px;
+    }
+  }
+  .karma {
+    border-top: 4px solid $orange;
+    @media (min-width: $mobile) {
+      position: relative;
+      right: 0;
+      bottom: 250px;
+    }
+  }
+  .calculator {
+    border-top: 4px solid $blue;
+    @media (min-width: $mobile) {
+      position: relative;
+      left: 375px;
+      bottom: 650px;
+    }
+  }
+}
